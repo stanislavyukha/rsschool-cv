@@ -17,3 +17,16 @@ Hi there, my name is Stanislav and I am learning software development based on w
 - CSS
 - JavaScript (Basic level)
 - Git
+
+## Code example
+
+```
+//Should return number of bits in number
+const countBits = function(n) {
+  return n.toString(2).split('').filter(el => el > 0).length;
+};
+```
+
+## Work experience:
+
+I have no experience in work regarding software development yet.
