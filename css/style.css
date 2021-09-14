@@ -1,1 +1,4 @@
-
+.contacts-list {
+  display: flex;
+  font-size: 10px;
+}
