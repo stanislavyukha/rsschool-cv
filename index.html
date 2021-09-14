@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stanislav Yukha</title>
-    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+    <link rel="stylesheet" type="text/css" href="css/atom-one-dark.css">
+      <link rel="stylesheet"  href="css/style.css" />
+      
   </head>
   <body>
     <div class="container">
@@ -179,10 +183,38 @@
             </article>
           </div>
         </section>
+        <section class="section-general">
+          <div class="section-header">
+            <h3>Code Example</h3>
+          </div>
+          <div class="section-content">
+            <div class="code-example">
+              <p>
+                Task: Write a function that takes an integer as input, and returns the
+                number of bits that are equal to one in the binary representation of
+                that number. You can guarantee that input is non-negative.
+              </p>
+              <p>
+                Example: The binary representation of 1234 is 10011010010, so the function
+                should return 5 in this case.
+              </p> 
+                
+              
+              <pre>
+          <code class="language-js">
+        //Should return number of bits in number
+        const countBits = function(n) {
+          return n.toString(2).split('').filter(el => el > 0).length;
+          };
+          </code>
+                </pre>
+            </div>
+          </div>
+        </section>
         
       </main>
     </div>
-
-  
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script> hljs.highlightAll();</script>
   </body>
 </html>
