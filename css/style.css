@@ -87,7 +87,7 @@ p {
     font-weight: 400;
   }
   .my-surname {
-    font-weight: 700;
+    font-weight: 400;
     color: var(--accent-color);
     font-size: 3.5rem;
     letter-spacing: 0.5rem;
@@ -114,11 +114,80 @@ p {
   .header-social-icons a:hover {
     background-color: var(--background-darker);
   }
-  .expertise-title {
-    display: flex;
-    align-items: center;
+  .section-expertise .section-content {
+    display: grid;
+    grid-template-columns: 1fr;
   }
-  .expertise-title .expertise-title-number {
-    margin-right: 1.5rem;
+  .expertise-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .expertise-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .expertise-number {
+    font-weight: 700;
+    color: var(--accent-color);
+  }
+  .expertise-text {
+    padding-left: 15px;
+  }
+  .expertise-text h4 {
+    margin-top: 0;
+  }
+  .expertise-text p {
+    text-indent: 0px;
+    margin-top: -10px;
+  }
+  .section-skills .section-content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .skill-item {
+    margin-bottom: 40px;
+  }
+  .skill-text {
+    display: flex;
+    align-items: flex-start;
+  }
+  .skill-text-percent {
+    width: 50px;
+    text-align: left;
+    color: var(--accent-color);
+  }
+  .skill-text-percent span {
+    font-size: 0.7rem;
+  }
+  .skill-text h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 5px;
+  }
+  .skill-progress {
+    margin-top: 5px;
+    height: 5px;
+    width: 100%;
+    background-color: var(--border-color);
+  }
+  .progress-fill {
+    height: 100%;
+    background-color: var(--accent-color);
+  }
+  .progress-fill-html {
+    width: 100%;
+  }
+  .progress-fill-css,
+  .progress-fill-js {
+    width: 80%;
+  }
+  .progress-fill-react {
+    width: 20%;
+  }
+  .progress-fill-english {
+    width: 75%;
+  }
+  .progress-fill-git {
+    width: 70%;
   }
 }
