@@ -2,7 +2,7 @@
   --font-color: #a4a5a6;
   --accent-color: #e0a80d;
   --background-primary: #2b2c2c;
-  --background-darker: #292a2a;
+  --background-darker: #282a2a;
   --background-lighter: #2d2e2e;
   --border-color: #3f4040;
   scroll-behavior: smooth;
@@ -76,8 +76,8 @@ ul {
     overflow: hidden;
     min-height: 100px;
     min-width: 100px;
-    max-height: 200px;
-    max-width: 200px;
+    max-height: 220px;
+    max-width: 220px;
   }
   .my-photo img {
     width: 100%;
@@ -151,6 +151,7 @@ ul {
   }
   .section-skills .section-content {
     display: grid;
+    gap: 20px;
     grid-template-columns: 1fr;
   }
   .skill-item {
@@ -202,6 +203,9 @@ ul {
     background-color: var(--accent-color);
     transition: all 1.4s ease-in-out 0.5s;
   }
+  .section-code .section-content code {
+    font-size: 0.8rem;
+  }
   .section-education .section-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -212,7 +216,7 @@ ul {
     text-transform: uppercase;
   }
   .section-education .section-content p {
-    text-indent: 20px;
+    padding-left: 20px;
   }
   .education-image,
   .work-image {
@@ -253,7 +257,7 @@ ul {
   .contacts-list .contacts-item h4,
   p {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   .contacts-icon {
     font-size: 1.5rem;
@@ -277,8 +281,10 @@ ul {
   footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    background-color: var(--background-darker);
+    border-top: 1px solid var(--border-color);
   }
   footer .footer-item {
     font-size: 1rem;
@@ -291,5 +297,86 @@ ul {
 
   footer .footer-item img {
     width: 80px;
+  }
+}
+
+@media (min-width: 576px) {
+  .section-expertise .section-content,
+  .section-contacts .contacts-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .section-code .section-content code {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-skills .section-content,
+  .section-education .section-content {
+    grid-template-columns: 1fr 1fr;
+  }
+  .section-education .education-image figcaption {
+    min-height: 65px;
+  }
+  .section-works .section-content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-max(220px, 300px) min-max(220px, 300px);
+
+    grid-template-areas:
+      'sport tech'
+      'shop shop';
+  }
+  .section-works .section-content .sport {
+    grid-area: sport;
+  }
+  .section-works .section-content .tech {
+    grid-area: tech;
+  }
+  .section-works .section-content .shop {
+    width: 50%;
+    grid-area: shop;
+    justify-self: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-contacts .contacts-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1170px) {
+  .container {
+    max-width: 1170px;
+  }
+  .section-general {
+    border: 1px solid rgba(54, 54, 54, 0.3);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    justify-items: stretch;
+  }
+  .section-general .section-header {
+    border: 1px transparent;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .section-of-header .section-header {
+    background-color: var(--background-primary);
+    align-items: center;
+  }
+  .primary {
+    background-color: var(--background-primary);
+  }
+  .section-of-header .section-header .my-photo {
+    max-height: 180px;
+    max-width: 180px;
+  }
+  .contacts-list {
+    font-size: 1rem;
+  }
+  footer {
+    border: none;
+    background-color: var(--background-lighter);
   }
 }
