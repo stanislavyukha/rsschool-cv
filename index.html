@@ -15,9 +15,15 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
     <link rel="stylesheet" type="text/css" href="css/atom-one-dark.css" />
     <link rel="stylesheet" href="css/normalize.css" />
@@ -26,15 +32,45 @@
   <body>
     <div class="container">
       <header>
-        <!-- <nav>
-          <ul>
-            <li>1</li>
-            <li><2/li>
-            <li>3</li>
-            <li></li>
-            <li></li>
-          </ul>
-        </nav> -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <span class="navbar-brand">Menu</span>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#expertise">Expertise</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#education">Education</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#code">Code example</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#works">My works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacts">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
         <section class="section-general section-of-header">
           <div class="section-header primary">
             <div class="my-photo">
@@ -64,7 +100,7 @@
         </section>
       </header>
       <main>
-        <section class="section-general section-about">
+        <section id="about" class="section-general section-about">
           <div class="section-header darker">
             <h3>About myself</h3>
           </div>
@@ -84,7 +120,7 @@
             </p>
           </div>
         </section>
-        <section class="section-general section-expertise">
+        <section id="expertise" class="section-general section-expertise">
           <div class="section-header primary">
             <h3>My expertise</h3>
           </div>
@@ -124,7 +160,7 @@
             </article>
           </div>
         </section>
-        <section class="section-general section-skills">
+        <section id="skills" class="section-general section-skills">
           <div class="section-header">
             <h3>My skills level</h3>
           </div>
@@ -185,7 +221,7 @@
             </div>
           </div>
         </section>
-        <section class="section-general section-education">
+        <section id="education" class="section-general section-education">
           <div class="section-header primary">
             <h3>Education and courses</h3>
           </div>
@@ -217,7 +253,7 @@
             </article>
             <article class="education-item">
               <div class="expertise-title">
-                <h3>Web Fundamentals SoftServe</h3>
+                <h3>Web Fundamentals</h3>
               </div>
               <figure class="education-image">
                 <figcaption>
@@ -242,7 +278,7 @@
             </article>
           </div>
         </section>
-        <section class="section-general section-code">
+        <section id="code" class="section-general section-code">
           <div class="section-header">
             <h3>Code Example</h3>
           </div>
@@ -273,7 +309,7 @@
             </div>
           </div>
         </section>
-        <section class="section-general section-works">
+        <section id="works" class="section-general section-works">
           <div class="section-header primary">
             <h3>My works</h3>
           </div>
@@ -325,7 +361,7 @@
             </article>
           </div>
         </section>
-        <section class="section-general section-contacts">
+        <section id="contacts" class="section-general section-contacts">
           <div class="section-header">
             <h3>Contacts</h3>
           </div>
@@ -369,7 +405,11 @@
                 </a>
               </li>
               <li>
-                <div class="contacts-item">
+                <a
+                  class="contacts-item"
+                  target="blank"
+                  href="https://www.google.com/maps/place/Ivano-Frankivsk,+76000/@48.9117518,24.6470894,12z"
+                >
                   <div class="contacts-icon">
                     <i class="fas fa-map-marker-alt"></i>
                   </div>
@@ -377,7 +417,7 @@
                     <h4>Location</h4>
                     <address>Ivano-Frankivsk, Ukraine</address>
                   </div>
-                </div>
+                </a>
               </li>
             </ul>
           </div>
@@ -397,6 +437,9 @@
         </div>
       </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <script>
       hljs.highlightAll();

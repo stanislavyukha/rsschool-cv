@@ -12,8 +12,20 @@ body {
   box-sizing: border-box;
   color: var(--font-color);
   background-color: var(--background-primary);
-  font-family: Lato, Helvetica, sans-serif;
+  font-family: Montserrat, Helvetica, sans-serif;
   font-size: 10px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-size: inherit;
+  font-family: Montserrat, Helvetica, sans-serif;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+h3 {
+  font-size: 1.2rem;
 }
 
 .container {
@@ -31,8 +43,26 @@ a:active {
 ul {
   list-style: none;
 }
+header .bg-dark {
+  background-color: var(--background-darker) !important;
+}
+header .navbar-dark,
+.navbar-brand {
+  color: var(--font-color) !important;
+}
+
+.nav-item .nav-link {
+  font-size: 0.9rem !important;
+}
+.nav-item:hover .nav-link {
+  color: var(--accent-color) !important;
+}
 
 @media (min-width: 320px) {
+  .navbar.navbar-expand-lg {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+  }
   .section-general {
     font-size: 1.2rem;
     font-weight: 400;
@@ -88,6 +118,7 @@ ul {
     align-items: center;
   }
   .my-name {
+    font-size: 1.5rem;
     font-weight: 400;
   }
   .accent {
@@ -118,7 +149,7 @@ ul {
     margin-right: 10px;
   }
   .header-social-icons a:hover {
-    background-color: var(--background-darker);
+    background-color: var(--accent-color);
   }
   .section-about .section-content p {
     text-indent: 20px;
@@ -201,7 +232,7 @@ ul {
   }
   .in-view {
     background-color: var(--accent-color);
-    transition: all 1.4s ease-in-out 0.5s;
+    transition: all 1.5s ease-in-out 0.5s;
   }
   .section-code .section-content code {
     font-size: 0.8rem;
@@ -242,6 +273,7 @@ ul {
   }
   .work-image img {
     width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.7);
   }
   .section-contacts .contacts-list {
     display: grid;
@@ -249,10 +281,14 @@ ul {
     gap: 20px;
     justify-items: start;
     padding-left: 0;
+    margin-bottom: 0;
   }
   .contacts-list .contacts-item {
     display: flex;
     flex-direction: row;
+  }
+  .contacts-list .contacts-item:hover .contacts-icon {
+    background-color: var(--accent-color);
   }
   .contacts-list .contacts-item h4,
   p {
@@ -263,6 +299,8 @@ ul {
     font-size: 1.5rem;
     width: 40px;
     height: 40px;
+    min-width: 40px;
+    min-height: 40px;
     background-color: var(--border-color);
     display: flex;
     justify-content: center;
@@ -316,7 +354,8 @@ ul {
     grid-template-columns: 1fr 1fr;
   }
   .section-education .education-image figcaption {
-    min-height: 65px;
+    height: 65px;
+    font-size: 0.9rem;
   }
   .section-works .section-content {
     grid-template-columns: 1fr 1fr;
@@ -337,17 +376,29 @@ ul {
     grid-area: shop;
     justify-self: center;
   }
+  footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 @media (min-width: 992px) {
   .section-contacts .contacts-list {
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 60px;
+  }
+  .section-contacts .contacts-list p,
+  .section-contacts .contacts-list address {
+    font-size: 0.9rem;
   }
 }
 
 @media (min-width: 1170px) {
   .container {
     max-width: 1170px;
+  }
+  .navbar.navbar-expand-lg {
+    border: 1px solid rgba(54, 54, 54, 0.3);
   }
   .section-general {
     border: 1px solid rgba(54, 54, 54, 0.3);
